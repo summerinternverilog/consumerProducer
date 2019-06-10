@@ -21,7 +21,7 @@
 // Additional Comments:
 // 
 ////////////////////////////////////////////////////////////////////////////////
-`define clk_period 10000
+`define clk_period 100
 module consumer_tb;
 
 	// Inputs
@@ -48,8 +48,8 @@ module consumer_tb;
 		reset = 1;
 		#`clk_period;
 		reset = 0;
-		//#(`clk_period*1000);
-		//$stop;
+		#(`clk_period*1000);
+		$finish;
         
 		// Add stimulus here
 
